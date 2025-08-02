@@ -11,13 +11,11 @@ export default function HomePage() {
                 />
 
                 {/* Name */}
-                <h1 className='mt-6 text-3xl font-bold text-center text-white mix-blend-difference drop-shadow-lg'>
+                <h1 className='mt-6 text-3xl font-bold text-center text-white text-glow'>
                     James Melzark
                 </h1>
-
-                {/* Tagline */}
-                <p className='mt-2 font-semibold text-center text-white mix-blend-difference drop-shadow'>
-                    Full-Stack Developer · QA Specialist · Navy Veteran
+                <p className='mt-2 font-semibold text-center text-white text-glow'>
+                    Full-Stack Developer · Navy Veteran
                 </p>
 
                 {/* Buttons */}
@@ -30,7 +28,7 @@ export default function HomePage() {
                     </a>
                     <a
                         href='#contact'
-                        className='px-6 py-2 border border-gray-500 text-white rounded-lg shadow hover:bg-gray-100 hover:text-gray-900 transition'
+                        className='px-6 py-2 border border-gray-500 text-white rounded-lg shadow hover:bg-gray-100 transition'
                     >
                         Contact Me
                     </a>

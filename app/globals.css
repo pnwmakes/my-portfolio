@@ -44,7 +44,7 @@ h6 {
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Gradient animation */
+/* Background gradient animation */
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -70,7 +70,27 @@ h6 {
     }
 }
 
-/* Background gradient animation */
+/* Text glow animation synced to card gradient */
+@keyframes gradientTextGlow {
+    0%,
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+            0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(37, 99, 235, 0.7);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+            0 0 20px rgba(37, 99, 235, 0.8), 0 0 30px rgba(59, 130, 246, 0.7);
+    }
+}
+
+/* Glow text class */
+.text-glow {
+    color: white;
+    font-weight: bold;
+    animation: gradientTextGlow 18s ease-in-out infinite reverse;
+}
+
+/* Animated background gradient */
 .bg-animated-gradient {
     background: linear-gradient(-45deg, #0f172a, #1e3a8a, #2563eb, #0f172a);
     background-size: 300% 300%;
@@ -87,7 +107,6 @@ h6 {
     box-shadow: 0 6px 40px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 1;
-    color: #111; /* Dark text for readability */
 }
 
 /* Glow behind the card */
@@ -130,4 +149,9 @@ h6 {
     animation: pulseGlow 4s ease-in-out infinite;
     filter: blur(40px);
     z-index: -1;
+}
+
+/* Keep buttons readable */
+.card-gradient a {
+    mix-blend-mode: normal;
 }
