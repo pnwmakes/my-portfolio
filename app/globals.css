@@ -155,3 +155,13 @@ h6 {
 .card-gradient a {
     mix-blend-mode: normal;
 }
+/* Fade-in sections on scroll */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
