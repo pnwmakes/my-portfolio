@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         siteName: 'James Melzark Portfolio',
         images: [
             {
-                url: '/images/og-image.jpg',
+                url: '/images/og-image.png',
                 width: 1200,
                 height: 630,
                 alt: 'James Melzark Portfolio Preview',
