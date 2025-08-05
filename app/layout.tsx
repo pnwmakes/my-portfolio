@@ -10,8 +10,9 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: 'James Melzark | Portfolio',
-        description: 'Full-Stack Developer | QA Specialist | Navy Veteran',
-        url: 'https://yourdomain.com',
+        description:
+            'Full-Stack Developer | QA Specialist | Navy Veteran. Connect on LinkedIn: www.linkedin.com/in/jamesmelzark',
+        url: 'https://jamesmelzark.com',
         siteName: 'James Melzark Portfolio',
         images: [
             {
