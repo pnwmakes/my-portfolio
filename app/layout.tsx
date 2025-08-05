@@ -1,13 +1,11 @@
-// app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
+import Footer from './Footer'; // Import your existing footer
 
 export const metadata: Metadata = {
     title: 'James Melzark | Portfolio',
     description: 'Full-Stack Developer | QA Specialist | Navy Veteran',
-    icons: {
-        icon: '/favicon.ico',
-    },
+    icons: { icon: '/favicon.ico' },
     openGraph: {
         title: 'James Melzark | Portfolio',
         description: 'Full-Stack Developer | QA Specialist | Navy Veteran',
@@ -15,7 +13,7 @@ export const metadata: Metadata = {
         siteName: 'James Melzark Portfolio',
         images: [
             {
-                url: 'https://jamesmelzark.com/images/og-image-v2.png', // FULL URL for cache busting
+                url: 'https://jamesmelzark.com/images/og-image-v2.png',
                 width: 1200,
                 height: 630,
                 alt: 'James Melzark Portfolio Preview',
@@ -41,6 +39,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className='antialiased bg-animated-gradient min-h-screen text-gray-900 relative'>
                 {children}
+                <Footer /> {/* Now the footer is always shown */}
             </body>
         </html>
     );
