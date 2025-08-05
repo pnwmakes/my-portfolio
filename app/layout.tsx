@@ -1,6 +1,6 @@
-// app/layout.tsx
 import './globals.css';
 import { ReactNode } from 'react';
+import Footer from './Footer';
 
 export const metadata = {
     title: 'James Melzark | Portfolio',
@@ -9,9 +9,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
     return (
-        <html lang='en'>
-            <body className='antialiased bg-animated-gradient min-h-screen text-gray-900 relative'>
+        <html lang="en">
+            <body className="antialiased bg-animated-gradient min-h-screen text-gray-900 relative">
                 {children}
+                <Footer />
             </body>
         </html>
     );

@@ -57,12 +57,33 @@ export default function HomePage() {
                         alt='James Melzark'
                         className='w-40 h-40 rounded-full object-cover shadow-lg border-4 border-white'
                     />
-                    <h1 className='mt-6 text-3xl font-bold text-center text-white text-glow'>
+                    {/* Name */}
+                    <h1 className="mt-6 text-3xl font-bold text-center text-white text-glow">
                         James Melzark
                     </h1>
-                    <p className='mt-2 font-semibold text-center text-white text-glow'>
+                    <p className="mt-2 font-semibold text-center text-white text-glow">
                         Full-Stack Developer · Navy Veteran
                     </p>
+
+                    {/* LinkedIn Link */}
+                    <a
+                        href="https://www.linkedin.com/in/jamesmelzark"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition flex items-center space-x-2"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M19 0h-14c-2.76 0-5 ... (linkedin path) ..." />
+                        </svg>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                    {/* Call to Action Buttons */}
+
                     <div className='mt-4 flex space-x-4'>
                         <a
                             href='#projects'
@@ -192,10 +213,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* FOOTER */}
-            <footer className='text-center py-6 bg-black/40 text-sm'>
-                © {new Date().getFullYear()} James Melzark. All rights reserved.
-            </footer>
         </main>
     );
 }
