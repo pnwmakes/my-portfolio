@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         siteName: 'James Melzark Portfolio',
         images: [
             {
-                url: 'https://jamesmelzark.com/images/og-image-v2.png', // FULL URL
+                url: 'https://jamesmelzark.com/images/og-image-v2.png', // FULL URL for cache busting
                 width: 1200,
                 height: 630,
                 alt: 'James Melzark Portfolio Preview',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'James Melzark | Portfolio',
         description: 'Full-Stack Developer | QA Specialist | Navy Veteran',
-        images: ['https://jamesmelzark.com/images/og-image.png'], // FULL URL
+        images: ['https://jamesmelzark.com/images/og-image-v2.png'],
     },
 };
 
