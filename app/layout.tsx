@@ -1,8 +1,12 @@
-export const metadata = {
+// app/layout.tsx
+import './globals.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
     title: 'James Melzark | Portfolio',
     description: 'Full-Stack Developer | QA Specialist | Navy Veteran',
     icons: {
-        icon: '/favicon.ico', // Path to your favicon
+        icon: '/favicon.ico',
     },
     openGraph: {
         title: 'James Melzark | Portfolio',
@@ -11,7 +15,7 @@ export const metadata = {
         siteName: 'James Melzark Portfolio',
         images: [
             {
-                url: '/images/og-image.jpg', // Your custom OG image
+                url: '/images/og-image.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'James Melzark Portfolio Preview',
@@ -27,3 +31,17 @@ export const metadata = {
         images: ['/images/og-image.jpg'],
     },
 };
+
+export default function RootLayout({
+    children,
+}: Readonly<{
+    children: React.ReactNode;
+}>) {
+    return (
+        <html lang='en'>
+            <body className='antialiased bg-animated-gradient min-h-screen text-gray-900 relative'>
+                {children}
+            </body>
+        </html>
+    );
+}
