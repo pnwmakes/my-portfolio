@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function HomePage() {
     const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -20,9 +21,7 @@ export default function HomePage() {
 
     return (
         <main className='bg-animated-gradient text-white relative'>
-            {/* HERO SECTION */}
             <section className='flex flex-col items-center justify-center min-h-screen px-4 relative'>
-                {/* Scroll Indicator */}
                 <a
                     href='#about'
                     className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 transition-opacity duration-700 ${
@@ -50,35 +49,32 @@ export default function HomePage() {
                     </div>
                 </a>
 
-                {/* Card */}
                 <div className='card-gradient glow-container flex flex-col items-center backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-white/20 relative z-10'>
                     <img
                         src='/images/headshot.png'
                         alt='James Melzark'
                         className='w-40 h-40 rounded-full object-cover shadow-lg border-4 border-white'
                     />
-                    {/* Name */}
-                    <h1 className="mt-6 text-3xl font-bold text-center text-white text-glow">
+                    <h1 className='mt-6 text-3xl font-bold text-center text-white text-glow'>
                         James Melzark
                     </h1>
-                    <p className="mt-2 font-semibold text-center text-white text-glow">
+                    <p className='mt-2 font-semibold text-center text-white text-glow'>
                         Full-Stack Developer · Navy Veteran
                     </p>
 
-                    {/* LinkedIn Link */}
                     <a
-                        href="https://www.linkedin.com/in/jamesmelzark"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition flex items-center space-x-2"
+                        href='https://www.linkedin.com/in/jamesmelzark'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition flex items-center space-x-2'
                     >
                         <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
+                            xmlns='http://www.w3.org/2000/svg'
+                            className='w-5 h-5'
+                            fill='currentColor'
+                            viewBox='0 0 24 24'
                         >
-                            <path d="M19 0h-14c-2.76 0-5 ... (linkedin path) ..." />
+                            <path d='M19 0h-14c-2.76 0-5 ... (linkedin path) ...' />
                         </svg>
                         <span>Connect on LinkedIn</span>
                     </a>
@@ -101,7 +97,6 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* ABOUT SECTION */}
             <section
                 id='about'
                 className='py-20 bg-white/10 backdrop-blur-sm px-4'
@@ -118,13 +113,13 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* PROJECTS SECTION */}
             <section
                 id='projects'
                 className='py-20 bg-black/30 backdrop-blur-sm px-4'
             >
                 <div className='max-w-6xl mx-auto text-center'>
                     <h2 className='text-4xl font-bold mb-10'>Projects</h2>
+
                     <div className='grid md:grid-cols-3 gap-8'>
                         {/* Example Project Card */}
                         <div className='bg-white/10 p-6 rounded-xl shadow-lg'>
@@ -135,12 +130,12 @@ export default function HomePage() {
                                 Short description of the project, what it does,
                                 and the tech stack used.
                             </p>
-                            <a
-                                href='#'
-                                className='text-blue-400 hover:underline'
+                            <Link
+                                href='/projects/coming-soon'
+                                className='px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition'
                             >
                                 View Project →
-                            </a>
+                            </Link>
                         </div>
                         <div className='bg-white/10 p-6 rounded-xl shadow-lg'>
                             <h3 className='text-2xl font-bold mb-2'>
@@ -152,7 +147,7 @@ export default function HomePage() {
                             </p>
                             <a
                                 href='#'
-                                className='text-blue-400 hover:underline'
+                                className='px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition'
                             >
                                 View Project →
                             </a>
@@ -165,18 +160,27 @@ export default function HomePage() {
                                 Short description of the project, what it does,
                                 and the tech stack used.
                             </p>
-                            <a
-                                href='#'
-                                className='text-blue-400 hover:underline'
+                            <Link
+                                href='/projects/coming-soon'
+                                className='px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition'
                             >
                                 View Project →
-                            </a>
+                            </Link>
                         </div>
+                    </div>
+
+                    {/* View All Projects Button */}
+                    <div className='mt-10'>
+                        <Link
+                            href='/projects'
+                            className='px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition'
+                        >
+                            View All Projects →
+                        </Link>
                     </div>
                 </div>
             </section>
 
-            {/* CONTACT SECTION */}
             <section
                 id='contact'
                 className='py-20 bg-white/10 backdrop-blur-sm px-4'
@@ -187,22 +191,37 @@ export default function HomePage() {
                         Have a question or want to work together? Fill out the
                         form below or connect with me via social media.
                     </p>
-                    <form className='grid gap-4 max-w-lg mx-auto'>
+                    <form
+                        name='contact'
+                        method='POST'
+                        data-netlify='true'
+                        className='grid gap-4 max-w-lg mx-auto'
+                    >
+                        {/* Netlify hidden input */}
+                        <input type='hidden' name='form-name' value='contact' />
+
                         <input
                             type='text'
+                            name='name'
                             placeholder='Your Name'
+                            required
                             className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
                         />
                         <input
                             type='email'
+                            name='email'
                             placeholder='Your Email'
+                            required
                             className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
                         />
                         <textarea
+                            name='message'
                             rows={5}
                             placeholder='Your Message'
+                            required
                             className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
                         ></textarea>
+
                         <button
                             type='submit'
                             className='bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg font-bold'
@@ -212,7 +231,6 @@ export default function HomePage() {
                     </form>
                 </div>
             </section>
-
         </main>
     );
 }

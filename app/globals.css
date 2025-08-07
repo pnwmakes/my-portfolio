@@ -1,11 +1,9 @@
 @import 'tailwindcss';
 
-/* Smooth scrolling for in-page links */
 html {
     scroll-behavior: smooth;
 }
 
-/* Body defaults */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
         Roboto, sans-serif;
@@ -13,7 +11,6 @@ body {
     color: #111;
 }
 
-/* Dark mode base styles */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #111;
@@ -21,7 +18,6 @@ body {
     }
 }
 
-/* Link hover */
 a {
     @apply transition-colors duration-200;
 }
@@ -29,7 +25,6 @@ a:hover {
     @apply text-blue-600 dark:text-blue-400;
 }
 
-/* Headings */
 h1,
 h2,
 h3,
@@ -39,12 +34,10 @@ h6 {
     font-weight: 700;
 }
 
-/* Container helper */
 .container {
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Background gradient animation */
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -70,7 +63,6 @@ h6 {
     }
 }
 
-/* Text glow animation synced to card gradient */
 @keyframes gradientTextGlow {
     0%,
     100% {
@@ -83,21 +75,18 @@ h6 {
     }
 }
 
-/* Glow text class */
 .text-glow {
     color: white;
     font-weight: bold;
     animation: gradientTextGlow 18s ease-in-out infinite reverse;
 }
 
-/* Animated background gradient */
 .bg-animated-gradient {
     background: linear-gradient(-45deg, #0f172a, #1e3a8a, #2563eb, #0f172a);
     background-size: 300% 300%;
     animation: gradientShift 18s ease-in-out infinite;
 }
 
-/* Card gradient animation (opposite phase) */
 .card-gradient {
     background: linear-gradient(-45deg, #2563eb, #1e3a8a, #0f172a, #2563eb);
     background-size: 300% 300%;
@@ -109,7 +98,6 @@ h6 {
     z-index: 1;
 }
 
-/* Glow behind the card */
 .card-gradient::before {
     content: '';
     position: absolute;
@@ -129,7 +117,6 @@ h6 {
     pointer-events: none;
 }
 
-/* Glow container for extra pop */
 .glow-container {
     position: relative;
 }
@@ -151,11 +138,9 @@ h6 {
     z-index: -1;
 }
 
-/* Keep buttons readable */
 .card-gradient a {
     mix-blend-mode: normal;
 }
-/* Fade-in sections on scroll */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);

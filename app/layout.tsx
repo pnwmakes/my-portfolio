@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import Footer from './Footer'; // Import your existing footer
+import Footer from './Footer';
 
 export const metadata: Metadata = {
     title: 'James Melzark | Portfolio',
@@ -39,7 +39,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className='antialiased bg-animated-gradient min-h-screen text-gray-900 relative'>
                 {children}
-                <Footer /> {/* Now the footer is always shown */}
+                <Footer /> {}
             </body>
         </html>
     );
