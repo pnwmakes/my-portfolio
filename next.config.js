@@ -2,7 +2,12 @@
 const nextConfig = {
     reactStrictMode: true,
     experimental: {
-        serverActions: true,
+        serverActions: {},
+    },
+    netlify: {
+        functions: {
+            included_files: ['netlify/entrypoints/forms.ts'],
+        },
     },
 };
 
