@@ -196,6 +196,7 @@ export default function HomePage() {
                         method='POST'
                         data-netlify='true'
                         netlify-honeypot='bot-field'
+                        action='/thank-you'
                         className='grid gap-4 max-w-lg mx-auto'
                     >
                         {/* Hidden fields for Netlify */}
