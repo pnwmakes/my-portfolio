@@ -1,17 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async headers() {
-        return [
-            {
-                source: '/thank-you',
-                headers: [
-                    {
-                        key: 'x-prerender-revalidate',
-                        value: 'true',
-                    },
-                ],
+    experimental: {
+        serverActions: true,
+        netlify: {
+            functions: {
+                included_files: ['netlify/entrypoints/forms.ts'],
             },
-        ];
+        },
     },
 };
 
