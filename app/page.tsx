@@ -197,43 +197,13 @@ export default function HomePage() {
                         data-netlify='true'
                         netlify-honeypot='bot-field'
                         action='/thank-you'
-                        className='grid gap-4 max-w-lg mx-auto'
                     >
-                        {/* Hidden fields for Netlify */}
                         <input type='hidden' name='form-name' value='contact' />
                         <input type='hidden' name='bot-field' />
-
-                        <input
-                            type='text'
-                            name='name'
-                            placeholder='Your Name'
-                            required
-                            defaultValue=''
-                            className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
-                        />
-                        <input
-                            type='email'
-                            name='email'
-                            placeholder='Your Email'
-                            required
-                            defaultValue=''
-                            className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
-                        />
-                        <textarea
-                            name='message'
-                            placeholder='Your Message'
-                            rows={5}
-                            required
-                            defaultValue=''
-                            className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
-                        ></textarea>
-
-                        <button
-                            type='submit'
-                            className='bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg font-bold'
-                        >
-                            Send Message
-                        </button>
+                        <input type='text' name='name' required />
+                        <input type='email' name='email' required />
+                        <textarea name='message' required></textarea>
+                        <button type='submit'>Send</button>
                     </form>
                 </div>
             </section>
