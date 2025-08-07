@@ -199,7 +199,6 @@ export default function HomePage() {
                         action='/thank-you'
                     >
                         <input type='hidden' name='form-name' value='contact' />
-                        <input type='hidden' name='bot-field' />
                         <input type='text' name='name' required />
                         <input type='email' name='email' required />
                         <textarea name='message' required></textarea>
