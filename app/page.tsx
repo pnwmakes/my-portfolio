@@ -198,6 +198,7 @@ export default function HomePage() {
                         netlify-honeypot='bot-field'
                         className='grid gap-4 max-w-lg mx-auto'
                     >
+                        {/* Hidden fields for Netlify */}
                         <input type='hidden' name='form-name' value='contact' />
                         <input type='hidden' name='bot-field' />
 
@@ -205,26 +206,27 @@ export default function HomePage() {
                             type='text'
                             name='name'
                             placeholder='Your Name'
-                            defaultValue=''
                             required
+                            defaultValue=''
                             className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
                         />
                         <input
                             type='email'
                             name='email'
                             placeholder='Your Email'
-                            defaultValue=''
                             required
+                            defaultValue=''
                             className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
                         />
                         <textarea
                             name='message'
                             placeholder='Your Message'
                             rows={5}
-                            defaultValue=''
                             required
+                            defaultValue=''
                             className='p-3 rounded bg-white/20 border border-white/30 focus:outline-none'
                         ></textarea>
+
                         <button
                             type='submit'
                             className='bg-blue-600 hover:bg-blue-700 py-3 px-6 rounded-lg font-bold'
