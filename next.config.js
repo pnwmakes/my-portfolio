@@ -1,13 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
     experimental: {
-        serverActions: {},
-    },
-    netlify: {
-        functions: {
-            included_files: ['netlify/entrypoints/forms.ts'],
-        },
+        serverActions: {}, // must be object, not boolean
+        netlify: {}, // must be included to enable Netlify runtime
     },
 };
 

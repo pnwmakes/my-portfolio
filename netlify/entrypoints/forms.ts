@@ -1,9 +1,8 @@
+// netlify/entrypoints/forms.ts
+
 export const handler = async (event: any) => {
     return {
         statusCode: 200,
-        body: JSON.stringify({
-            message: 'Netlify Forms passthrough received',
-            data: event.body,
-        }),
+        body: JSON.stringify({ message: 'Form handler active' }),
     };
 };
