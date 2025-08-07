@@ -195,7 +195,6 @@ export default function HomePage() {
                         name='contact'
                         method='POST'
                         data-netlify='true'
-                        netlify-honeypot='bot-field'
                         action='/thank-you'
                     >
                         <input type='hidden' name='form-name' value='contact' />
