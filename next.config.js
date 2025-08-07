@@ -1,6 +1,4 @@
-// next.config.js
-const netlifyPlugin = require('@netlify/next');
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
     experimental: {
@@ -8,4 +6,4 @@ const nextConfig = {
     },
 };
 
-module.exports = netlifyPlugin(nextConfig);
+module.exports = nextConfig;
