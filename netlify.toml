@@ -6,4 +6,4 @@
   package = "@netlify/plugin-nextjs"
 
 [functions."*"]
-included_files = ["netlify/entrypoints/forms.ts"]
+  included_files = ["netlify/entrypoints/forms.ts"]
