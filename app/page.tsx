@@ -14,7 +14,6 @@ export default function HomePage() {
                 setShowScrollIndicator(true);
             }
         };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -74,11 +73,10 @@ export default function HomePage() {
                             fill='currentColor'
                             viewBox='0 0 24 24'
                         >
-                            <path d='M19 0h-14c-2.76 0-5 ... (linkedin path) ...' />
+                            <path d='M19 0h-14c-2.76 0-5 ...' />
                         </svg>
                         <span>Connect on LinkedIn</span>
                     </a>
-                    {/* Call to Action Buttons */}
 
                     <div className='mt-4 flex space-x-4'>
                         <a
@@ -119,7 +117,6 @@ export default function HomePage() {
             >
                 <div className='max-w-6xl mx-auto text-center'>
                     <h2 className='text-4xl font-bold mb-10'>Projects</h2>
-
                     <div className='grid md:grid-cols-3 gap-8'>
                         {/* Example Project Card */}
                         <div className='bg-white/10 p-6 rounded-xl shadow-lg'>
@@ -168,8 +165,6 @@ export default function HomePage() {
                             </Link>
                         </div>
                     </div>
-
-                    {/* View All Projects Button */}
                     <div className='mt-10'>
                         <Link
                             href='/projects'
@@ -191,17 +186,12 @@ export default function HomePage() {
                         Have a question or want to work together? Fill out the
                         form below or connect with me via social media.
                     </p>
-                    <form
-                        name='contact'
-                        method='POST'
-                        data-netlify='true'
-                        action='/thank-you'
+                    <a
+                        href='/contact.html'
+                        className='inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition'
                     >
-                        <input type='hidden' name='form-name' value='contact' />
-                        <input type='text' name='name' />
-                        <input type='email' name='email' />
-                        <button type='submit'>Send</button>
-                    </form>
+                        Go to Contact Form
+                    </a>
                 </div>
             </section>
         </main>
