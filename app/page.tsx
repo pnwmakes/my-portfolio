@@ -200,7 +200,6 @@ export default function HomePage() {
                         <input type='hidden' name='form-name' value='contact' />
                         <input type='text' name='name' required />
                         <input type='email' name='email' required />
-                        <textarea name='message' required></textarea>
                         <button type='submit'>Send</button>
                     </form>
                 </div>

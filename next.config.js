@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-        serverActions: true, // or false — just must be a boolean
+        serverActions: true, // or false — just must be boolean
     },
     netlify: {
         functions: {
