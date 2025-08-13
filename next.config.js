@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-        serverActions: true, // or false — just must be boolean
+        serverActions: true,
     },
     netlify: {
         functions: {
-            included_files: ['.netlify/functions/forms.ts'],
+            included_files: ['.netlify/entrypoints/forms.ts'],
         },
     },
 };
