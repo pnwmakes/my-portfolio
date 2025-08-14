@@ -187,7 +187,7 @@ export default function HomePage() {
                         form below or connect with me via social media.
                     </p>
                     <a
-                        href='/contact.html'
+                        href='/contact'
                         className='inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition'
                     >
                         Go to Contact Form

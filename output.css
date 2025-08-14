@@ -1,4 +1,2 @@
-/* output.css: Tailwind build for static HTML */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/preflight';
+@import 'tailwindcss/utilities';
