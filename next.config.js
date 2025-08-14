@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        serverActions: true,
-    },
-    netlify: {
-        functions: {
-            included_files: ['.netlify/entrypoints/forms.ts'],
-        },
-    },
+    output: 'export', // <-- This enables static export (replaces `next export`)
+    trailingSlash: true, // optional but helps avoid 404s for folder paths
 };
 
 module.exports = nextConfig;

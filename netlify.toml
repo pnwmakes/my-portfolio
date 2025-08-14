@@ -1,10 +1,12 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
 
 [functions]
-  included_files = [".netlify/entrypoints/forms.ts"]
-  
+  node_bundler = "esbuild"
 
-[[plugins]]
+[plugins]
   package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
