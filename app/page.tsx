@@ -22,7 +22,7 @@ export default function HomePage() {
         <main className='bg-animated-gradient text-white relative'>
             <section className='flex flex-col items-center justify-center min-h-screen px-4 relative'>
                 <a
-                    href='#about'
+                    href='#contact'
                     className={`absolute bottom-6 left-1/2 transform -translate-x-1/2 transition-opacity duration-700 ${
                         showScrollIndicator ? 'opacity-100' : 'opacity-0'
                     }`}
